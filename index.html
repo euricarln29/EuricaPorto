@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eurica Rizki Lusiana Nugraha | Human Capital & HR-Tech Builder</title>
+    
+    <!-- CUTE CAT FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
+
+    <!-- Google Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              neobruBgLight: '#fcfbf7',
+              neobruBgDark: '#0f172a',
+              neobruYellow: '#fde047',
+              neobruPurple: '#c084fc',
+              neobruBlue: '#38bdf8',
+              neobruRed: '#f87171',
+              neobruGreen: '#4ade80',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .light body {
+        background-color: #fcfbf7;
+        color: #0f172a;
+      }
+      .dark body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+
+      /* NEUBRUTALISM CARDS & BUTTONS */
+      .neo-card {
+        border: 3px solid #0f172a;
+        box-shadow: 5px 5px 0px #0f172a;
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .dark .neo-card {
+        border-color: #f8fafc;
+        box-shadow: 5px 5px 0px #f8fafc;
+      }
+      .neo-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 9px 9px 0px #0f172a;
+      }
+      .dark .neo-card:hover {
+        box-shadow: 9px 9px 0px #f8fafc;
+      }
+
+      .neo-btn {
+        border: 2.5px solid #0f172a;
+        box-shadow: 4px 4px 0px #0f172a;
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .dark .neo-btn {
+        border-color: #f8fafc;
+        box-shadow: 4px 4px 0px #f8fafc;
+      }
+      .neo-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 6px 6px 0px #0f172a;
+      }
+      .dark .neo-btn:hover {
+        box-shadow: 6px 6px 0px #f8fafc;
+      }
+      .neo-btn:active {
+        transform: translateY(2px);
+        box-shadow: 2px 2px 0px #0f172a;
+      }
+
+      /* Hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-neobruYellow selection:text-slate-900 min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbf7]/90 dark:bg-slate-900/90 backdrop-blur-md border-b-3 border-slate-900 dark:border-slate-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-neobruRed border-2.5 border-slate-900 flex items-center justify-center font-black text-white text-lg shadow-[2px_2px_0px_#0f172a]">
+                    🐱
+                </div>
+                <div>
+                    <span class="font-bold text-slate-900 dark:text-white tracking-tight text-sm block leading-none">Eurica Rizki L. N.</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Human Capital & HR-Tech Builder</span>
+                </div>
+            </div>
+
+            <!-- CENTER NAV MENU -->
+            <div class="hidden md:flex items-center gap-2 font-bold text-xs">
+                <a href="#home" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">Home</a>
+                <a href="#about" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">About</a>
+                <a href="#skills" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">Skills</a>
+                <a href="#experience" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">Experience</a>
+                <a href="#projects" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">HR Tools</a>
+                <a href="#simulator" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">Live Portal Demo</a>
+                <a href="#contact" class="px-3 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-white dark:bg-slate-800 dark:text-white hover:bg-neobruYellow dark:hover:text-slate-900 transition-all">Contact</a>
+            </div>
+
+            <!-- RIGHT CONTROLS -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleTheme()" class="w-9 h-9 rounded-full border-2 border-slate-900 dark:border-white bg-neobruYellow flex items-center justify-center font-bold shadow-[2px_2px_0px_#0f172a] hover:scale-105 transition-all text-slate-900">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <a href="#contact" class="px-3.5 py-1.5 rounded-full border-2 border-slate-900 dark:border-white bg-neobruGreen text-slate-900 font-bold text-xs flex items-center gap-1.5 shadow-[2px_2px_0px_#0f172a] hover:scale-105 transition-all">
+                    ✉ Get In Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- LEFT CONTENT -->
+                <div class="lg:col-span-7 space-y-5">
+                    
+                    <!-- TOP BADGES -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full bg-neobruYellow border-2 border-slate-900 font-bold text-xs text-slate-900 shadow-[2px_2px_0px_#0f172a] flex items-center gap-1">
+                            🎓 Bachelor of Psychology (GPA 3.87 / 4.00)
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-neobruGreen border-2 border-slate-900 font-bold text-xs text-slate-900 shadow-[2px_2px_0px_#0f172a] flex items-center gap-1">
+                            📍 Bandung, Indonesia
+                        </span>
+                    </div>
+
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-extrabold tracking-wider uppercase text-slate-500 dark:text-slate-400 block">HUMAN CAPITAL & HR-TECH AUTOMATION</span>
+                        <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+                            EURICA RIZKI LUSIANA NUGRAHA
+                        </h1>
+                        <h2 class="text-xl sm:text-2xl font-bold text-rose-500 dark:text-rose-400">
+                            HR Administration | Payroll & Compensation | Human Capital & Recruitment
+                        </h2>
+                    </div>
+
+                    <!-- SUMMARY QUOTE BOX -->
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border-2.5 border-slate-900 dark:border-white shadow-[4px_4px_0px_#0f172a] dark:shadow-[4px_4px_0px_#ffffff] space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                        <p class="font-bold text-slate-900 dark:text-white">"Bridging Human Capital Operations with Smart Automation & Custom Web Tools."</p>
+                        <p class="leading-relaxed">
+                            HR professional with 2+ years of experience in HR Administration, Payroll, Compensation & Benefits, Recruitment, and employee lifecycle management. Experienced in payroll processing, BPJS Ketenagakerjaan & BPJS Kesehatan administration, employment contracts, HR Policies & SOPs, KPI implementation, and HR reporting for 300+ employees. Strong in HR data management, reporting, and process automation.
+                        </p>
+                    </div>
+
+                    <!-- SKILL CHIPS -->
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-200 text-xs font-bold text-slate-900 dark:text-white">✓ HR Administration</span>
+                        <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-200 text-xs font-bold text-slate-900 dark:text-white">✓ Payroll & Compensation</span>
+                        <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-200 text-xs font-bold text-slate-900 dark:text-white">✓ Human Capital</span>
+                        <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-200 text-xs font-bold text-slate-900 dark:text-white">✓ Recruitment Specialist</span>
+                        <span class="px-3 py-1 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-200 text-xs font-bold text-slate-900 dark:text-white">✓ Talent Acquisition</span>
+                    </div>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="#projects" class="px-5 py-2.5 rounded-full bg-neobruRed text-white font-bold text-xs neo-btn flex items-center gap-2">
+                            🚀 Explore HR Tools
+                        </a>
+                        <a href="#simulator" class="px-5 py-2.5 rounded-full bg-neobruYellow text-slate-900 font-bold text-xs neo-btn flex items-center gap-2">
+                            ▶ Try Live Demo Engine
+                        </a>
+                        <a href="https://linkedin.com/in/euricarln" target="_blank" class="w-9 h-9 rounded-full bg-neobruBlue border-2 border-slate-900 flex items-center justify-center font-bold text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+                            in
+                        </a>
+                        <a href="mailto:euricarln29@gmail.com" class="w-9 h-9 rounded-full bg-neobruPurple border-2 border-slate-900 flex items-center justify-center font-bold text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+                            ✉
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT PHOTO FRAME -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        
+                        <div class="p-4 rounded-3xl bg-neobruYellow border-3 border-slate-900 dark:border-white shadow-[8px_8px_0px_#0f172a] dark:shadow-[8px_8px_0px_#ffffff] space-y-3 relative">
+                            
+                            <div class="absolute -top-4 right-4 px-4 py-1 rounded-lg bg-neobruPurple border-2 border-slate-900 font-black text-[10px] uppercase font-mono shadow-[2px_2px_0px_#0f172a] rotate-2">
+                                PSYCHOLOGY + HR CODE
+                            </div>
+
+                            <div class="rounded-2xl border-2.5 border-slate-900 overflow-hidden bg-slate-200 relative h-[380px]">
+                                <img src="profile.jpg" alt="Eurica Rizki" class="w-full h-full object-cover">
+                                
+                                <div class="absolute bottom-3 left-3 right-3 p-2 rounded-xl bg-slate-900/90 text-white text-[11px] font-bold border border-white/20 backdrop-blur-sm flex items-center gap-1.5">
+                                    <span>💼 Professional Human Capital</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT I DO SECTION (DYNAMIC VALUES FROM GOOGLE SHEETS) -->
+    <section id="what-i-do" class="py-16 border-t-3 border-slate-900 dark:border-slate-100 bg-neobruPurple/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="px-3 py-1 rounded-full bg-neobruYellow border-2 border-slate-900 text-xs font-extrabold uppercase font-mono shadow-[2px_2px_0px_#0f172a] text-slate-900">Core Accomplishments</span>
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white mt-2">What I Do & Key Metrics</h2>
+            </div>
+
+            <!-- GRID 5 KOTAK PRESTASI DYNAMIC -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                
+                <!-- CARD 1: EMPLOYEES HANDLED -->
+                <div class="p-5 rounded-2xl neo-card bg-white dark:bg-slate-800 space-y-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Employees Handled</span>
+                        <div class="text-3xl font-black text-rose-500 font-sans tracking-tight mt-1">
+                            <span id="metric-employees">300+</span> <span class="text-sm font-bold block text-rose-500">Employees</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 font-medium pt-2 border-t-2 border-slate-100 dark:border-slate-700">
+                        Administered monthly payroll, BPJS Ketenagakerjaan & Kesehatan, employment contracts (PKWT/PKWTT), and HR SOPs.
+                    </p>
+                </div>
+
+                <!-- CARD 2: CORPORATE CLIENTS -->
+                <div class="p-5 rounded-2xl neo-card bg-white dark:bg-slate-800 space-y-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Corporate Clients</span>
+                        <div class="text-3xl font-black text-purple-500 font-sans tracking-tight mt-1">
+                            <span id="metric-clients">10+</span> <span class="text-sm font-bold block text-purple-500">Clients</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 font-medium pt-2 border-t-2 border-slate-100 dark:border-slate-700">
+                        Managed end-to-end recruitment for IT and Non-IT roles across Junior to Lead positions for concurrent vacancies.
+                    </p>
+                </div>
+
+                <!-- CARD 3: RECRUITMENT FULFILLMENT -->
+                <div class="p-5 rounded-2xl neo-card bg-white dark:bg-slate-800 space-y-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Recruitment Fulfillment</span>
+                        <div class="text-3xl font-black text-amber-500 font-sans tracking-tight mt-1">
+                            <span id="metric-fulfillment">90–95%</span> <span class="text-sm font-bold block text-amber-500">Target Achieved</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 font-medium pt-2 border-t-2 border-slate-100 dark:border-slate-700">
+                        Successfully fulfilled hiring pipeline targets ranging from Staff to Manager level roles across diverse industries.
+                    </p>
+                </div>
+
+                <!-- CARD 4: PSYCHOMETRIC ASSESSMENTS -->
+                <div class="p-5 rounded-2xl neo-card bg-white dark:bg-slate-800 space-y-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Psychometric Assessments</span>
+                        <div class="text-3xl font-black text-emerald-500 font-sans tracking-tight mt-1">
+                            <span id="metric-participants">350+</span> <span class="text-sm font-bold block text-emerald-500">Participants</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 font-medium pt-2 border-t-2 border-slate-100 dark:border-slate-700">
+                        Administered, scored, and evaluated standardized psychological tests and competency-based interviews (BEI).
+                    </p>
+                </div>
+
+                <!-- CARD 5: PROFITABILITY TARGET -->
+                <div class="p-5 rounded-2xl neo-card bg-white dark:bg-slate-800 space-y-2 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-slate-400 block">Profitability Target</span>
+                        <div class="text-3xl font-black text-sky-500 font-sans tracking-tight mt-1">
+                            <span id="metric-cogs">50–60%</span> <span class="text-sm font-bold block text-sky-500">COGS</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 font-medium pt-2 border-t-2 border-slate-100 dark:border-slate-700">
+                        Led salary negotiations with candidates to maintain COGS profitability targets while balancing market competitiveness.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section id="skills" class="py-16 border-t-3 border-slate-900 dark:border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border-3 border-slate-900 dark:border-slate-100 shadow-[6px_6px_0px_#0f172a] dark:shadow-[6px_6px_0px_#ffffff] space-y-6">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 flex items-center justify-center text-2xl shadow-[2px_2px_0px_#0f172a]">
+                        🛠️
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+                        HR Expertise & Technical Skills
+                    </h2>
+                </div>
+
+                <!-- CATEGORY 1: HR ADMINISTRATION & OPERATIONS -->
+                <div class="space-y-2">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">HR Administration & Operations:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Payroll Administration</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employee Administration</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employee Records</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Attendance & Leave Management</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employee Lifecycle Administration</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Documentation</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Reporting</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: PAYROLL, COMPENSATION & BENEFITS -->
+                <div class="space-y-2 pt-2">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">Payroll, Compensation & Benefits:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Payroll Processing</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Compensation & Benefits</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Salary & Allowance Administration</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Overtime Administration</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employee Incentives</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">BPJS Ketenagakerjaan</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruYellow border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">BPJS Kesehatan</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: HR POLICIES & GOVERNANCE -->
+                <div class="space-y-2 pt-2">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">HR Policies & Governance:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Policies & SOPs</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employment Contracts (PKWT/PKWTT)</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">KPI Implementation</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Performance Management</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Employee Relations</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruBlue border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Workplace Health Administration</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: TALENT ACQUISITION & RECRUITMENT -->
+                <div class="space-y-2 pt-2">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">Talent Acquisition & Recruitment:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">End-to-End Recruitment</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Technical & Non-Technical Hiring</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">High-Volume Recruitment</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Talent Sourcing</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Candidate Screening</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Interview (BEI)</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Psychological Assessment</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Candidate Evaluation</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Salary Negotiation</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruPurple border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Stakeholder Coordination</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 5: HR ANALYTICS & TECHNOLOGY -->
+                <div class="space-y-2 pt-2">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">HR Analytics & Technology:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Dashboard</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HR Reporting</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Workforce Analytics</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Google Apps Script Automation</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Microsoft Excel</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Google Workspace</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">HRIS</span>
+                        <span class="px-3.5 py-2 rounded-2xl bg-neobruGreen border-2.5 border-slate-900 font-bold text-xs text-slate-900 shadow-[3px_3px_0px_#0f172a]">Looker Studio</span>
+                    </div>
+                </div>
+
+                <!-- CATEGORY 6: LANGUAGES -->
+                <div class="space-y-2 pt-2 border-t-2 border-slate-200 dark:border-slate-700">
+                    <h3 class="text-xs font-extrabold uppercase font-mono text-slate-700 dark:text-slate-300">Languages:</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-100 font-bold text-xs text-slate-900 dark:text-white">English — Professional Working Proficiency</span>
+                        <span class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-100 font-bold text-xs text-slate-900 dark:text-white">Indonesian — Native</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience" class="py-16 border-t-3 border-slate-900 dark:border-slate-100 bg-neobruYellow/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-neobruGreen border-2 border-slate-900 text-xs font-extrabold uppercase font-mono text-slate-900 shadow-[2px_2px_0px_#0f172a]">Career Timeline</span>
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white mt-2">Professional Experience</h2>
+                </div>
+
+                <!-- CAROUSEL CONTROLS -->
+                <div class="flex items-center gap-2">
+                    <button onclick="scrollExp(-380)" class="w-10 h-10 rounded-xl bg-white dark:bg-slate-800 border-2.5 border-slate-900 dark:border-white font-black text-slate-900 dark:text-white flex items-center justify-center neo-btn">
+                        ←
+                    </button>
+                    <button onclick="scrollExp(380)" class="w-10 h-10 rounded-xl bg-neobruYellow border-2.5 border-slate-900 text-slate-900 font-black flex items-center justify-center neo-btn">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <!-- CAROUSEL TRACK -->
+            <div id="exp-carousel" class="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4">
+                
+                <!-- ROLE 1 -->
+                <div class="min-w-[340px] sm:min-w-[420px] max-w-[420px] p-6 rounded-3xl neo-card bg-white dark:bg-slate-800 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-lg bg-neobruYellow border-2 border-slate-900 text-[10px] font-mono font-bold text-slate-900">December 2024 – Present</span>
+                            <span class="text-xs font-bold text-rose-500">PT Padepokan Tujuh Sembilan</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white">Human Capital</h3>
+                        <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc pl-4 font-medium leading-relaxed">
+                            <li>Manage HR operations and employee administration for 300+ employees, covering payroll, C&B, contracts, and lifecycle.</li>
+                            <li>Prepare and administer Indonesian employment contracts and HR documentation including PKWT, PKWTT, and SK.</li>
+                            <li>Administer Employment Social Security (BPJS Ketenagakerjaan) and National Health Insurance (BPJS Kesehatan).</li>
+                            <li>Manage end-to-end recruitment for 10+ corporate clients covering IT and Non-IT roles while maintaining 50-60% COGS targets.</li>
+                            <li>Build automated HR & Recruitment dashboards covering employee data, payroll, talent pipelines, and KPIs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ROLE 2 -->
+                <div class="min-w-[340px] sm:min-w-[420px] max-w-[420px] p-6 rounded-3xl neo-card bg-white dark:bg-slate-800 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-lg bg-neobruPurple border-2 border-slate-900 text-[10px] font-mono font-bold text-slate-900">September 2024 – December 2024</span>
+                            <span class="text-xs font-bold text-purple-600">Nimo Land Group</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white">HRGA Admin</h3>
+                        <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc pl-4 font-medium leading-relaxed">
+                            <li>Administered payroll, attendance, leave management, employee incentives, and personnel records for HO and branches.</li>
+                            <li>Maintained accurate employee databases and HR documentation supporting day-to-day HR administration.</li>
+                            <li>Prepared and maintained employment contracts and employee documentation, ensuring completeness and compliance.</li>
+                            <li>Managed recruitment for Blue-Collar and White-Collar positions across Head Office and branch offices.</li>
+                            <li>Conducted psychological assessments and candidate evaluations to support recruitment and employee development.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ROLE 3 -->
+                <div class="min-w-[340px] sm:min-w-[420px] max-w-[420px] p-6 rounded-3xl neo-card bg-white dark:bg-slate-800 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-lg bg-neobruBlue border-2 border-slate-900 text-[10px] font-mono font-bold text-slate-900">February 2024 – May 2024</span>
+                            <span class="text-xs font-bold text-sky-600">PT Bahtera Solusi Nusantara</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white">Talent Acquisition Internship</h3>
+                        <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc pl-4 font-medium leading-relaxed">
+                            <li>Supported end-to-end recruitment for internal hiring and external client projects across multiple industries.</li>
+                            <li>Sourced and screened 50+ candidates daily through LinkedIn, JobStreet, Glints, and other platforms.</li>
+                            <li>Conducted Behavioral Event Interviews (BEI) and coordinated interview processes with hiring stakeholders.</li>
+                            <li>Maintained candidate records, recruitment documentation, interview schedules, and status reports.</li>
+                            <li>Supported client visits and employee interviews, gathering workforce information for recruitment activities.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ROLE 4 -->
+                <div class="min-w-[340px] sm:min-w-[420px] max-w-[420px] p-6 rounded-3xl neo-card bg-white dark:bg-slate-800 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-lg bg-neobruRed border-2 border-slate-900 text-[10px] font-mono font-bold text-slate-900">July 2023 – August 2023</span>
+                            <span class="text-xs font-bold text-rose-600">PT Kadar Baru Berkah</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white">Human Resources Internship</h3>
+                        <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc pl-4 font-medium leading-relaxed">
+                            <li>Screened 50+ candidate applications daily for Engineering, Drafting, and Marketing positions.</li>
+                            <li>Conducted Behavioral Event Interviews (BEI) with hiring managers to evaluate candidate competencies.</li>
+                            <li>Managed recruitment campaigns across LinkedIn, Instagram, Telegram, and online platforms.</li>
+                            <li>Coordinated candidate communication, interview scheduling, and recruitment administration.</li>
+                            <li>Managed attendance records across three operational locations and supported performance appraisals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ROLE 5 -->
+                <div class="min-w-[340px] sm:min-w-[420px] max-w-[420px] p-6 rounded-3xl neo-card bg-white dark:bg-slate-800 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-lg bg-neobruGreen border-2 border-slate-900 text-[10px] font-mono font-bold text-slate-900">July 2021 – September 2021</span>
+                            <span class="text-xs font-bold text-emerald-600">Literasi Psikologi Indonesia</span>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 dark:text-white">Head of HR Recruitment Internship</h3>
+                        <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-2 list-disc pl-4 font-medium leading-relaxed">
+                            <li>Managed end-to-end recruitment activities including sourcing, screening, interviewing, onboarding, and offboarding.</li>
+                            <li>Screened 50+ CVs daily and conducted 50+ Behavioral Event Interviews (BEI) monthly.</li>
+                            <li>Collaborated with management to develop KPIs and recruitment-related performance indicators.</li>
+                            <li>Coordinated employee training and HR operational activities supporting organizational effectiveness.</li>
+                            <li>Automated recruitment reporting using advanced Google Sheets functions, improving tracking efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURED HR TOOLS SHOWCASE -->
+    <section id="projects" class="py-16 border-t-3 border-slate-900 dark:border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="px-3 py-1 rounded-full bg-neobruPurple border-2 border-slate-900 text-xs font-extrabold uppercase font-mono text-slate-900 shadow-[2px_2px_0px_#0f172a]">HR Tools Showcase</span>
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white mt-2">Custom Recruitment Applications</h2>
+                </div>
+                <div class="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-900 dark:border-white text-xs font-mono font-bold text-slate-900 dark:text-white">
+                    🔒 Protected Access & Interactive Demos
+                </div>
+            </div>
+
+            <!-- GRID OF HR TOOLS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- TOOL 1 -->
+                <div class="p-6 rounded-3xl bg-neobruYellow border-3 border-slate-900 shadow-[6px_6px_0px_#0f172a] space-y-4 text-slate-900 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-white border-2 border-slate-900 text-[10px] font-mono font-bold">INTERVIEW MANAGEMENT</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-[10px] font-mono font-bold">Live System</span>
+                        </div>
+
+                        <div class="rounded-2xl border-2 border-slate-900 overflow-hidden bg-white h-48 relative">
+                            <img src="Interview.jpg" alt="Dashboard PIC Interview" class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-2xl font-black">Dashboard PIC Interview</h3>
+
+                        <div class="p-4 rounded-2xl bg-white border-2.5 border-slate-900 text-xs font-medium space-y-2">
+                            <p>A centralized interview schedule selection dashboard for HR PICs to manage and adjust candidate interview slots easily.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• Features an automated candidate view connected to WhatsApp notifications and interview meeting links.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• Fully customizable per HR PIC for efficient scheduling controls.</p>
+                        </div>
+
+                        <div class="space-y-1 text-xs font-mono font-bold">
+                            <div>Tech Stack: HTML5, Tailwind CSS, JavaScript, Apps Script API</div>
+                            <div>Status: Live Demo View Mode</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-end">
+                        <button onclick="launchMockPreview('Dashboard PIC Interview')" class="px-5 py-2.5 rounded-2xl bg-white text-slate-900 font-bold text-xs neo-btn flex items-center gap-1.5">
+                            👁️ Try Live Preview
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TOOL 2 -->
+                <div class="p-6 rounded-3xl bg-neobruPurple border-3 border-slate-900 shadow-[6px_6px_0px_#0f172a] space-y-4 text-slate-900 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-white border-2 border-slate-900 text-[10px] font-mono font-bold">ONLINE ASSESSMENT</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-[10px] font-mono font-bold">Automated Scoring</span>
+                        </div>
+
+                        <div class="rounded-2xl border-2 border-slate-900 overflow-hidden bg-white h-48 relative">
+                            <img src="asesmen.jpg" alt="Platform Asesmen Rekrutmen Online" class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-2xl font-black">Platform Asesmen Rekrutmen Online</h3>
+
+                        <div class="p-4 rounded-2xl bg-white border-2.5 border-slate-900 text-xs font-medium space-y-2">
+                            <p>An online self-assessment platform for psychological testing, aptitude inventories, and candidate competency evaluation.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• All psychometric tests are executed via dedicated online links for applicant convenience.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• Automatically calculates test scores and integrates psychological findings with BEI interview results.</p>
+                        </div>
+
+                        <div class="space-y-1 text-xs font-mono font-bold">
+                            <div>Tech Stack: JavaScript, Google Sheets DB, Scoring Engine</div>
+                            <div>Status: Interactive Scoring Engine</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-end">
+                        <button onclick="launchMockPreview('Platform Asesmen Rekrutmen')" class="px-5 py-2.5 rounded-2xl bg-white text-slate-900 font-bold text-xs neo-btn flex items-center gap-1.5">
+                            🧮 Test Scoring Engine
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TOOL 3 -->
+                <div class="p-6 rounded-3xl bg-neobruGreen border-3 border-slate-900 shadow-[6px_6px_0px_#0f172a] space-y-4 text-slate-900 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-white border-2 border-slate-900 text-[10px] font-mono font-bold">BACKGROUND CHECKING</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-[10px] font-mono font-bold">🔒 Protected Portal</span>
+                        </div>
+
+                        <div class="rounded-2xl border-2 border-slate-900 overflow-hidden bg-white h-48 relative">
+                            <img src="BGC.jpg" alt="Automated Reference Check & BGC Dashboard" class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-2xl font-black">Automated Reference Check & BGC Dashboard</h3>
+
+                        <div class="p-4 rounded-2xl bg-white border-2.5 border-slate-900 text-xs font-medium space-y-2">
+                            <p>An integrated reference check portal connecting candidate entry forms with automatic reference verification.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• Automatically contacts designated professional references and generates standardized background check documents instantly.</p>
+                        </div>
+
+                        <div class="space-y-1 text-xs font-mono font-bold">
+                            <div>Tech Stack: Web Canvas, Apps Script Trigger, Auto-Doc Generator</div>
+                            <div>Access Status: PIN Protected Dashboard</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-end">
+                        <button onclick="openPinModal('Automated Reference Check & BGC Dashboard', 'https://bit.ly/HCPortalP79')" class="px-5 py-2.5 rounded-2xl bg-white text-slate-900 font-bold text-xs neo-btn flex items-center gap-1.5">
+                            🔑 Unlock Portal (PIN Required)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TOOL 4 -->
+                <div class="p-6 rounded-3xl bg-neobruBlue border-3 border-slate-900 shadow-[6px_6px_0px_#0f172a] space-y-4 text-slate-900 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full bg-white border-2 border-slate-900 text-[10px] font-mono font-bold">RECRUITMENT TRACKER</span>
+                            <span class="px-3 py-1 rounded-full bg-slate-900 text-white text-[10px] font-mono font-bold">Two-Way Sync</span>
+                        </div>
+
+                        <div class="rounded-2xl border-2 border-slate-900 overflow-hidden bg-white h-48 relative">
+                            <img src="tracker.jpg" alt="Recruitment Tracker for Candidates" class="w-full h-full object-cover">
+                        </div>
+
+                        <h3 class="text-2xl font-black">Recruitment Tracker for Candidates</h3>
+
+                        <div class="p-4 rounded-2xl bg-white border-2.5 border-slate-900 text-xs font-medium space-y-2">
+                            <p>An automated backend engine processing candidate data, recruitment pipelines, attendance records, and real-time two-way synchronization from web forms to Google Sheets.</p>
+                            <p class="text-[11px] text-slate-700 font-semibold">• Eliminates manual entry and improves candidate tracking visibility across management teams.</p>
+                        </div>
+
+                        <div class="space-y-1 text-xs font-mono font-bold">
+                            <div>Tech Stack: Google Apps Script, REST Webhooks, Advanced Formulas</div>
+                            <div>Status: Two-Way Synchronization Active</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex items-center justify-end">
+                        <button onclick="launchMockPreview('Recruitment Tracker')" class="px-5 py-2.5 rounded-2xl bg-white text-slate-900 font-bold text-xs neo-btn flex items-center gap-1.5">
+                            ⚡ View Architecture
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HCPORTAL79 SIMULATOR SECTION -->
+    <section id="simulator" class="py-16 border-t-3 border-slate-900 dark:border-slate-100 bg-neobruBgLight dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="p-6 sm:p-8 rounded-3xl bg-neobruYellow border-3 border-slate-900 shadow-[8px_8px_0px_#0f172a] space-y-6 text-slate-900">
+                
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 text-white font-mono text-xs font-bold">
+                            ⚡ PORTAL SIMULATOR (HCPortal79)
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-black">Status Evaluation & Candidate Search Simulator</h2>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-800">Type a candidate name below to test the automated recruitment status evaluation!</p>
+                    </div>
+
+                    <div class="px-4 py-1.5 rounded-full bg-white border-2 border-slate-900 font-mono text-xs font-bold text-slate-900 self-start sm:self-auto shadow-[2px_2px_0px_#0f172a]">
+                        <span id="candidate-count">0 Candidates Loaded</span>
+                    </div>
+                </div>
+
+                <!-- SIMULATOR INTERFACE GRID -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-2">
+                    
+                    <!-- LEFT CONTROLS -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-900 mb-1">Search Candidate Name (Type to filter):</label>
+                            <input type="text" id="sim-search" oninput="filterCandidates()" placeholder="Search candidate name or position..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border-2.5 border-slate-900 font-mono text-xs font-bold focus:outline-none focus:ring-2 focus:ring-slate-900">
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white border-2.5 border-slate-900 space-y-2 text-xs font-mono">
+                            <div class="font-bold text-slate-900">// Simulator Instructions</div>
+                            <div class="text-slate-700 leading-relaxed font-semibold">
+                                Click the "Check Status" button on the candidate table on the right to view the official evaluation result pop-up (Passed / Rejected).
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT RESULTS TABLE -->
+                    <div class="lg:col-span-7 bg-white rounded-2xl border-2.5 border-slate-900 p-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-xs text-slate-900">Candidate Evaluation Summary Table:</span>
+                            <span class="px-3 py-1 rounded-full bg-neobruGreen border-2 border-slate-900 font-mono text-[10px] font-bold text-slate-900" id="table-summary-count">Syncing with Google Sheets...</span>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs font-mono">
+                                <thead class="bg-neobruPurple border-2 border-slate-900 font-bold text-slate-900">
+                                    <tr>
+                                        <th class="p-2 border-r-2 border-slate-900">Candidate Name</th>
+                                        <th class="p-2 border-r-2 border-slate-900">Position</th>
+                                        <th class="p-2 border-r-2 border-slate-900">Psychometrics</th>
+                                        <th class="p-2 border-r-2 border-slate-900">BEI Score</th>
+                                        <th class="p-2 border-r-2 border-slate-900">Combined Score</th>
+                                        <th class="p-2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="candidate-table-body" class="divide-y-2 divide-slate-100 text-[11px] font-semibold text-slate-800">
+                                    <!-- Dynamic Rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GET IN TOUCH SECTION -->
+    <section id="contact" class="py-20 border-t-3 border-slate-900 dark:border-slate-100 bg-neobruBgLight dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- LEFT INFO CARD -->
+                <div class="lg:col-span-4 p-8 rounded-3xl bg-neobruYellow border-3 border-slate-900 shadow-[6px_6px_0px_#0f172a] space-y-6 text-slate-900">
+                    <div class="space-y-2">
+                        <span class="px-3 py-1 rounded-full bg-white border-2 border-slate-900 font-mono text-xs font-bold">CONNECT & COLLABORATE</span>
+                        <h2 class="text-3xl font-black">Get In Touch</h2>
+                        <p class="text-xs font-medium text-slate-800 leading-relaxed">
+                            Open for Human Capital, HR Administration, Payroll, and HR Automation opportunities. Feel free to reach out for inquiries or professional discussions!
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-xs font-mono font-bold">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border-2 border-slate-900 flex items-center justify-center text-rose-500 font-bold text-lg">✉</div>
+                            <div>
+                                <span class="text-[10px] text-slate-600 block uppercase">EMAIL</span>
+                                <a href="mailto:euricarln29@gmail.com" class="font-bold text-slate-900 hover:underline">euricarln29@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border-2 border-slate-900 flex items-center justify-center text-sky-600 font-bold text-lg">in</div>
+                            <div>
+                                <span class="text-[10px] text-slate-600 block uppercase">LINKEDIN</span>
+                                <a href="https://linkedin.com/in/euricarln" target="_blank" class="font-bold text-slate-900 hover:underline">Eurica Rizki Lusiana Nugraha</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border-2 border-slate-900 flex items-center justify-center text-emerald-600 font-bold text-lg">📍</div>
+                            <div>
+                                <span class="text-[10px] text-slate-600 block uppercase">LOCATION</span>
+                                <span class="font-bold text-slate-900">Bandung, West Java, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM CARD -->
+                <div class="lg:col-span-8 p-8 rounded-3xl bg-white dark:bg-slate-900 border-3 border-slate-900 dark:border-slate-100 shadow-[6px_6px_0px_#0f172a] dark:shadow-[6px_6px_0px_#ffffff] space-y-4">
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-900 dark:text-slate-200 mb-1">Full Name</label>
+                                <input type="text" required placeholder="Enter your full name..." class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border-2 border-slate-900 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:border-neobruYellow">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-900 dark:text-slate-200 mb-1">Email Address</label>
+                                <input type="email" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border-2 border-slate-900 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:border-neobruYellow">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-900 dark:text-slate-200 mb-1">Subject</label>
+                            <input type="text" required placeholder="Example: HR Opportunity / Work Inquiry" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border-2 border-slate-900 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:border-neobruYellow">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-900 dark:text-slate-200 mb-1">Message</label>
+                            <textarea rows="4" required placeholder="Type your message here..." class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-950 border-2 border-slate-900 dark:border-slate-700 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:border-neobruYellow"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-neobruGreen text-slate-900 font-bold text-xs neo-btn flex items-center justify-center gap-2">
+                            ✈ Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="pt-12 text-center text-xs text-slate-500 font-mono">
+                © 2026 Eurica Rizki Lusiana Nugraha. All rights reserved.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EVALUATION RESULT POPUP MODAL -->
+    <div id="evalModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white border-3 border-slate-900 rounded-3xl max-w-md w-full p-6 space-y-4 shadow-[8px_8px_0px_#0f172a] relative text-slate-900">
+            <button onclick="closeEvalModal()" class="absolute top-4 right-4 font-black text-slate-900 hover:text-red-500 text-lg">✕</button>
+            
+            <div id="eval-status-badge" class="w-12 h-12 rounded-2xl bg-neobruGreen border-2 border-slate-900 flex items-center justify-center text-2xl font-bold">
+                🎉
+            </div>
+
+            <div class="space-y-1">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500">HCPortal79 Automated Decision</span>
+                <h3 class="text-xl font-black" id="eval-title">Application Status Result</h3>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border-2 border-slate-900 text-xs font-mono space-y-2" id="eval-body">
+                <!-- Dynamic text -->
+            </div>
+
+            <div class="flex justify-end pt-2">
+                <button onclick="closeEvalModal()" class="px-5 py-2.5 rounded-xl bg-neobruYellow border-2 border-slate-900 font-bold text-xs neo-btn">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PIN SECURITY OVERLAY MODAL -->
+    <div id="pinModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white border-3 border-slate-900 rounded-3xl max-w-md w-full p-6 space-y-4 shadow-[8px_8px_0px_#0f172a] relative text-slate-900">
+            <button onclick="closePinModal()" class="absolute top-4 right-4 font-black text-slate-900 hover:text-red-500 text-lg">✕</button>
+            <div class="w-12 h-12 rounded-2xl bg-neobruRed border-2 border-slate-900 flex items-center justify-center text-2xl font-bold text-white">🔑</div>
+            <h3 class="text-xl font-black" id="pin-modal-title">Protected Portal Access</h3>
+            <p class="text-xs text-slate-600 font-medium">This portal is protected under internal security compliance. Enter the authorization PIN to launch:</p>
+            
+            <input type="password" id="input-pin" placeholder="Enter Authorization PIN..." class="w-full px-3.5 py-2.5 rounded-xl border-2.5 border-slate-900 font-mono text-xs font-bold">
+            <div id="pin-error" class="text-xs font-bold text-rose-600 hidden">❌ Incorrect PIN! Access Denied.</div>
+
+            <div class="flex justify-end gap-2 pt-2">
+                <button onclick="closePinModal()" class="px-4 py-2 rounded-xl bg-slate-100 border-2 border-slate-900 text-xs font-bold">Cancel</button>
+                <button onclick="verifyPin()" class="px-4 py-2 rounded-xl bg-neobruYellow border-2 border-slate-900 text-xs font-bold neo-btn">Verify PIN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOGIC WITH GOOGLE SHEETS DYNAMIC FETCH -->
+    <script>
+      // ⚠️ PASTE URL GOOGLE APPS SCRIPT KAMU DI SINI (Atau biarkan kosong jika pakai data default):
+      const GOOGLE_SHEET_API_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+      const SECRET_PIN = "InternationalRemoteWork2027";
+      let targetUrl = "";
+      let candidates = [
+        { name: "Budi Pratama", role: "Frontend Dev", psiko: 88, bei: 85, status: "PASSED" },
+        { name: "Siti Rahmawati", role: "HR Admin", psiko: 85, bei: 80, status: "PASSED" },
+        { name: "Ahmad Fauzi", role: "Backend Dev", psiko: 62, bei: 58, status: "REJECTED" },
+        { name: "Dewi Kurnia", role: "Recruiter", psiko: 90, bei: 92, status: "PASSED" }
+      ];
+
+      // Fetch Live Data from Google Sheets API
+      async function loadDataFromSheets() {
+        if (!GOOGLE_SHEET_API_URL || GOOGLE_SHEET_API_URL === "YOUR_APPS_SCRIPT_WEB_APP_URL_HERE") {
+          console.log("Menggunakan data default (URL Apps Script belum diisi).");
+          renderCandidates(candidates);
+          return;
+        }
+
+        try {
+          const res = await fetch(GOOGLE_SHEET_API_URL);
+          const data = await res.json();
+
+          // Update Metrics
+          if (data.metrics) {
+            if (data.metrics.employees) document.getElementById('metric-employees').innerText = data.metrics.employees;
+            if (data.metrics.clients) document.getElementById('metric-clients').innerText = data.metrics.clients;
+            if (data.metrics.fulfillment) document.getElementById('metric-fulfillment').innerText = data.metrics.fulfillment;
+            if (data.metrics.participants) document.getElementById('metric-participants').innerText = data.metrics.participants;
+            if (data.metrics.cogs) document.getElementById('metric-cogs').innerText = data.metrics.cogs;
+          }
+
+          // Update Candidates
+          if (data.candidates && data.candidates.length > 0) {
+            candidates = data.candidates;
+            renderCandidates(candidates);
+          }
+        } catch (err) {
+          console.error("Gagal mengambil data dari Google Sheets API:", err);
+          renderCandidates(candidates);
+        }
+      }
+
+      // Dark/Light Theme Switcher
+      function toggleTheme() {
+        const root = document.getElementById('html-root');
+        const icon = document.getElementById('theme-icon');
+        if (root.classList.contains('light')) {
+          root.classList.remove('light');
+          root.classList.add('dark');
+          icon.innerText = "☀️";
+        } else {
+          root.classList.remove('dark');
+          root.classList.add('light');
+          icon.innerText = "🌙";
+        }
+      }
+
+      // Scroll Work Experiences Carousel
+      function scrollExp(amount) {
+        document.getElementById('exp-carousel').scrollBy({ left: amount, behavior: 'smooth' });
+      }
+
+      function renderCandidates(list) {
+        const tbody = document.getElementById('candidate-table-body');
+        tbody.innerHTML = '';
+        list.forEach(c => {
+          const combined = Math.round((c.psiko * 0.4) + (c.bei * 0.6));
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-slate-50";
+          tr.innerHTML = `
+            <td class="p-2 font-bold border-r-2 border-slate-200">${c.name}</td>
+            <td class="p-2 border-r-2 border-slate-200">${c.role}</td>
+            <td class="p-2 border-r-2 border-slate-200">${c.psiko}</td>
+            <td class="p-2 border-r-2 border-slate-200">${c.bei}</td>
+            <td class="p-2 font-bold text-rose-600 border-r-2 border-slate-200">${combined} / 100</td>
+            <td class="p-2">
+              <button onclick="checkStatus('${c.name}')" class="px-2 py-1 rounded-lg bg-neobruYellow border border-slate-900 font-bold text-[10px] hover:bg-neobruGreen transition-all">
+                Check Status ↗
+              </button>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+        document.getElementById('candidate-count').innerText = list.length + " Candidates Loaded";
+        document.getElementById('table-summary-count').innerText = list.length + " Candidates Shown";
+      }
+
+      function filterCandidates() {
+        const query = document.getElementById('sim-search').value.toLowerCase();
+        const filtered = candidates.filter(c => 
+          c.name.toLowerCase().includes(query) || 
+          c.role.toLowerCase().includes(query)
+        );
+        renderCandidates(filtered);
+      }
+
+      function checkStatus(name) {
+        const candidate = candidates.find(c => c.name === name);
+        if (!candidate) return;
+
+        const combined = Math.round((candidate.psiko * 0.4) + (candidate.bei * 0.6));
+        const badge = document.getElementById('eval-status-badge');
+        const title = document.getElementById('eval-title');
+        const body = document.getElementById('eval-body');
+
+        if (String(candidate.status).toUpperCase() === "PASSED") {
+          badge.className = "w-12 h-12 rounded-2xl bg-neobruGreen border-2 border-slate-900 flex items-center justify-center text-2xl font-bold";
+          badge.innerText = "🎉";
+          title.innerText = "Congratulations! Candidate Passed";
+          body.innerHTML = `
+            <div><strong>Applicant Name:</strong> ${candidate.name}</div>
+            <div><strong>Applied Position:</strong> ${candidate.role}</div>
+            <div><strong>Psychometric Score:</strong> ${candidate.psiko}</div>
+            <div><strong>BEI Score:</strong> ${candidate.bei}</div>
+            <div class="text-emerald-700 font-bold pt-1">Final Weighted Score: ${combined}/100 — SHORTLISTED</div>
+            <p class="pt-2 text-slate-600 font-sans">
+              "Congratulations! The application met all required competency benchmarks. The candidate is qualified for the next onboarding stage."
+            </p>
+          `;
+        } else {
+          badge.className = "w-12 h-12 rounded-2xl bg-neobruRed border-2 border-slate-900 flex items-center justify-center text-2xl font-bold text-white";
+          badge.innerText = "✉️";
+          title.innerText = "Candidate Status: Unsuccessful";
+          body.innerHTML = `
+            <div><strong>Applicant Name:</strong> ${candidate.name}</div>
+            <div><strong>Applied Position:</strong> ${candidate.role}</div>
+            <div><strong>Psychometric Score:</strong> ${candidate.psiko}</div>
+            <div><strong>BEI Score:</strong> ${candidate.bei}</div>
+            <div class="text-rose-600 font-bold pt-1">Final Weighted Score: ${combined}/100 — UNSUCCESSFUL</div>
+            <p class="pt-2 text-slate-600 font-sans">
+              "Thank you for participating. The application did not meet the minimum benchmark score for this vacancy."
+            </p>
+          `;
+        }
+
+        document.getElementById('evalModal').classList.remove('hidden');
+      }
+
+      function closeEvalModal() {
+        document.getElementById('evalModal').classList.add('hidden');
+      }
+
+      function openPinModal(title, url) {
+        targetUrl = url;
+        document.getElementById('pin-modal-title').innerText = "Unlock " + title;
+        document.getElementById('input-pin').value = "";
+        document.getElementById('pin-error').classList.add('hidden');
+        document.getElementById('pinModal').classList.remove('hidden');
+      }
+
+      function closePinModal() {
+        document.getElementById('pinModal').classList.add('hidden');
+      }
+
+      function verifyPin() {
+        const pin = document.getElementById('input-pin').value;
+        if (pin === SECRET_PIN) {
+          closePinModal();
+          window.open(targetUrl, '_blank');
+        } else {
+          document.getElementById('pin-error').classList.remove('hidden');
+        }
+      }
+
+      function launchMockPreview(toolName) {
+        alert("🔒 Preview Mode (" + toolName + "): Displaying interactive interface simulation.");
+      }
+
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        alert("Thank you! Your message has been submitted. Eurica Rizki will respond to your inquiry shortly.");
+      }
+
+      // Load data on start
+      window.addEventListener('DOMContentLoaded', loadDataFromSheets);
+    </script>
+</body>
+</html>
